@@ -4,6 +4,7 @@ FROM continuumio/miniconda3
 COPY map1.geojson /
 COPY app.py /
 COPY entities.txt /
+COPY environment.yml /
 RUN conda env update --name base --file environment.yml && conda clean -a
 
 # Add conda installation dir to PATH (instead of doing 'conda activate')
